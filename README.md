@@ -72,7 +72,6 @@ This repository focuses on lightweight and efficient tools:
 HTML/CSS: For interactive displays of puzzles and results.
 JavaScript: All solutions are implemented in clean, vanilla JS.
 Text-based Input: Standard .txt files for puzzle inputs.
-If you're comfortable with modern tools like React or TailwindCSS (which are often my go-to for web development), you can extend this project further for more interactivity or style.
 
 ## 🎅 Advent of Code Progress Tracker
 | Year | Days | Completed |
