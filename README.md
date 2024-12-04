@@ -77,8 +77,7 @@ If you're comfortable with modern tools like React or TailwindCSS (which are oft
 ## 🎅 Advent of Code Progress Tracker
 | Year | Days | Completed |
 | --- | ---- |-----------|
-|2024|🟩 Day 1–2 |(In progress...)|  
-|2023|✅ Day 1–25|(Complete!)  
+|2024|🟩 Day 1–2 |(In progress...)|
 
 ## ✍️ About Advent of Code
 Advent of Code is an annual programming event by Eric Wastl. From December 1st to 25th, a new challenge is released daily, perfect for honing your coding skills while enjoying the festive season. Join in and have some fun!
