@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AOC - Day 1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color: #121212;">
+        <div class="actions-container">
+            <input type="file" id="fileInput" accept=".txt">
+            <label for="fileInput" class="file-input" style="margin: 0 1rem;">Choisir un fichier</label>
+            <button class="execute-btn" onclick="resolveRiddle()" style="margin: 0 1rem;">Exécuter</button>
+        </div>
+        <pre id="output" style="word-wrap: break-word; white-space: pre-wrap;"></pre>
+        <script>
+          document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onload = function(e) {
+                const content = e.target.result;
+                document.getElementById('output').textContent = content;
+                localStorage.setItem('D1-fileContent', content);
+              };
+              reader.readAsText(file);
+            } else {
+              document.getElementById('output').textContent = 'Aucun fichier sélectionné.';
+            }
+          });
+
+          window.onload = function() {
+            const storedContent = localStorage.getItem('D1-fileContent');
+            if (storedContent) {
+              document.getElementById('output').textContent = storedContent;
+            }
+          };
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
