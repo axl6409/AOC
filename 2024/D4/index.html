@@ -15,6 +15,17 @@
         </div>
         <pre id="output" style="word-wrap: break-word; white-space: pre-wrap;"></pre>
         <script>
+          function generateStorageKey() {
+            const pathParts = window.location.pathname.split('/'); // Divise le chemin
+            const baseDir = pathParts[1]; // "AOC"
+            const year = pathParts[2]; // "2015"
+            const day = pathParts[3]; // "D01"
+            return `${baseDir}-${year}-${day}-fileContent`;
+          }
+          const storageKey = generateStorageKey();
+          function refreshPage() {
+            location.reload();
+          }
           document.getElementById('fileInput').addEventListener('change', function(event) {
             const file = event.target.files[0];
             if (file) {
@@ -22,24 +33,19 @@
               reader.onload = function(e) {
                 const content = e.target.result;
                 document.getElementById('output').textContent = content;
-                localStorage.setItem('D4-fileContent', content);
+                localStorage.setItem(storageKey, content);
               };
               reader.readAsText(file);
             } else {
               document.getElementById('output').textContent = 'Aucun fichier sélectionné.';
             }
           });
-
           window.onload = function() {
-            const storedContent = localStorage.getItem('D4-fileContent');
+            const storedContent = localStorage.getItem(storageKey);
             if (storedContent) {
               document.getElementById('output').textContent = storedContent;
             }
           };
-
-          function refreshPage() {
-            location.reload();
-          }
         </script>
         <script src="script-part2.js"></script>
     </body>

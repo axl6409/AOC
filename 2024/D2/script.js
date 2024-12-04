@@ -1,7 +1,10 @@
 function resolveRiddle() {
+  const content = document.querySelector('pre').innerText;
 
-  const container = document.querySelector('pre');
-  var content = container.innerText;
+  if (!content) {
+    alert("Aucun contenu trouvée!");
+    return;
+  }
 
   function isValidSequence(sequence) {
     const nums = sequence.split(' ').map(Number);

@@ -70,3 +70,25 @@ button.styled-btn:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
+
+pre {
+    position: relative;
+    font-family: monospace;
+    color: #ddd;
+}
+
+pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255,255,0,0.3);
+    pointer-events: none;
+    width: 0;
+    z-index: -1;
+    transition: width 0.1s linear;
+}
+pre::before {
+    width: var(--progressWidth);
+}

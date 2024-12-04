@@ -1,6 +1,10 @@
 function resolveRiddle() {
-    const container = document.querySelector('pre');
-    var content = container.innerText;
+    const content = document.querySelector('pre').innerText;
+
+    if (!content) {
+        alert("Aucun contenu trouvée!");
+        return;
+    }
 
     const clean = content.split(/\s+/).filter(item => item.trim() !== "");
 

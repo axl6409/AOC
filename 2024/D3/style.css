@@ -45,9 +45,8 @@ label.file-input:active {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-button.execute-btn {
+button.styled-btn {
     display: inline-block;
-    margin-top: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -61,13 +60,13 @@ button.execute-btn {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-button.execute-btn:hover {
+button.styled-btn:hover {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
     transform: translateY(-2px);
 }
 
-button.execute-btn:active {
+button.styled-btn:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }

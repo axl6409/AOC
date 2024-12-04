@@ -1,6 +1,11 @@
 function resolveRiddle() {
     const minifiedCode = document.querySelector('pre').innerText;
 
+    if (!minifiedCode) {
+        alert("Aucun code trouvée!");
+        return;
+    }
+
     // Expressions régulières
     const mulRegex = /mul\((\d{1,3}),(\d{1,3})\)/g; // Capture tous les appels `mul(x,y)` où x et y sont des nombres entre 1 et 3 chiffres
     const dontRegex = /\bdon't\(\)/g; // Capture les occurrences de `don't()` isolées

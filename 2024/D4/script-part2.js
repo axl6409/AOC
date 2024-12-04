@@ -77,8 +77,11 @@ function countXMas(input, gridWidth) {
 }
 
 function resolveRiddle() {
-  const container = document.querySelector('pre');
-  const content = container.innerText;
+  const content = document.querySelector('pre').textContent;
+  if (!content) {
+    alert("Aucun contenu trouvée!");
+    return;
+  }
   // Exemple d'input sous forme de chaîne unique
   const input = content.replace(/\s+/g, "");
 
