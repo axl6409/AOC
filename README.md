@@ -41,7 +41,7 @@ AdventOfCode/
 
 1. **Clone the repository**:
    ```bash
-   git clone git@github.com:axl6409/AOC.git
+   git clone https://github.com/axl6409/AOC.git
    ```
    
 2. **Navigate to a specific puzzle**:  
