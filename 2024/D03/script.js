@@ -1,6 +1,8 @@
 function resolveRiddle() {
+    // Charger le contenu de l'élément <pre> dans le DOM
     const minifiedCode = document.querySelector('pre').innerText;
 
+    // Si le contenu est vide, afficher une alerte et arrêter l'exécution
     if (!minifiedCode) {
         alert("Aucun code trouvée!");
         return;
